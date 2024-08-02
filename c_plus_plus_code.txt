@@ -91,6 +91,18 @@ int main() {
 			keybd_event('S', 0x2F, KEYEVENTF_EXTENDEDKEY | 0, 0);
 			keybd_event('S', 0x2F, KEYEVENTF_EXTENDEDKEY | KEYEVENTF_KEYUP, 0);
 			keybd_event(VK_CONTROL, 0x1D, KEYEVENTF_EXTENDEDKEY | KEYEVENTF_KEYUP, 0);
+
+			/*
+			 * below is to do, maybe to run program with contents of text file.
+			 * I don't know for sure, maybe...
+			 */
+
+			// set the position of the mouse over the run program button 
+			//SetCursorPos(0, 0);
+
+			// left click 
+			//mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
+			//mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
 		}
 	}
 	
