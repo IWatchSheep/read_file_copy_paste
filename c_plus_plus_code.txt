@@ -1,0 +1,120 @@
+#include <conio.h>
+#include <stdio.h>
+#include <cstdlib>
+#include <Windows.h> // use < > for all system and library headers
+#include <winuser.h>
+#include <cmath>
+#include <iostream>
+#include <iomanip>
+#include <complex>
+#include <string>
+#include <fstream> 
+#include <filesystem>
+
+using namespace std;
+
+// 2. forward declaration (also see later)
+void toClipboard(HWND hwnd, const std::string& s);
+
+// gets the size of the file
+std::ifstream::pos_type filesize(const char* filename);
+
+int main() {
+	// reads the size of the file to see if there's any new text to put in the text editor
+	// the code is inside a while loop that runs until a key is pressed
+	// this way the empty text file can be edited and made not empty, then new text is put inside the text editor
+
+	bool exit = false;
+
+	while (exit == false)
+	{
+		if (GetAsyncKeyState(VK_ESCAPE))
+		{
+			exit = true;
+		}
+		
+		int Size_Of_File = filesize("C:\\read\\readMe.txt");
+
+		if (Size_Of_File > 0)
+		{
+			// the string copied to the clipboard
+			ifstream inputFile("C:\\read\\readMe.txt");
+
+			if (!inputFile.is_open()) {
+				cerr << "Error opening the file!" << endl;
+				return 1;
+			}
+
+			string read_line;
+			string clipboard = "";
+			while (getline(inputFile, read_line)) {
+				clipboard.append(read_line);
+				clipboard.append("\n");
+			}
+			inputFile.close();
+
+			// empty the file
+			std::ofstream ofs;
+			ofs.open("C:\\read\\readMe.txt", std::ofstream::out | std::ofstream::trunc);
+			ofs.close();
+
+			// get desktop windows and the call toClipboard
+			HWND hwnd = GetDesktopWindow();
+			toClipboard(hwnd, clipboard);
+
+			// set the position of the mouse over the text editor
+			// making sure the code editor isn't full screen and the 
+			// text editor is visible on the right side of the screen
+			// on a 1920, 1080 resolution screen
+			// otherwise you'll need to manually adjust this to 
+			// put the mouse over the text editor
+			SetCursorPos(1500, 200);
+
+			// left click the text editor so I can paste in the text
+			mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
+			mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
+
+			// Select all the text in the text editor
+			keybd_event(VK_CONTROL, 0x1D, KEYEVENTF_EXTENDEDKEY | 0, 0);
+			keybd_event('A', 0x2F, KEYEVENTF_EXTENDEDKEY | 0, 0);
+			keybd_event('A', 0x2F, KEYEVENTF_EXTENDEDKEY | KEYEVENTF_KEYUP, 0);
+			keybd_event(VK_CONTROL, 0x1D, KEYEVENTF_EXTENDEDKEY | KEYEVENTF_KEYUP, 0);
+
+			// paste in the text into the text editor
+			keybd_event(VK_CONTROL, 0x1D, KEYEVENTF_EXTENDEDKEY | 0, 0);
+			keybd_event('V', 0x2F, KEYEVENTF_EXTENDEDKEY | 0, 0);
+			keybd_event('V', 0x2F, KEYEVENTF_EXTENDEDKEY | KEYEVENTF_KEYUP, 0);
+			keybd_event(VK_CONTROL, 0x1D, KEYEVENTF_EXTENDEDKEY | KEYEVENTF_KEYUP, 0);
+
+			// save the text in the text editor
+			keybd_event(VK_CONTROL, 0x1D, KEYEVENTF_EXTENDEDKEY | 0, 0);
+			keybd_event('S', 0x2F, KEYEVENTF_EXTENDEDKEY | 0, 0);
+			keybd_event('S', 0x2F, KEYEVENTF_EXTENDEDKEY | KEYEVENTF_KEYUP, 0);
+			keybd_event(VK_CONTROL, 0x1D, KEYEVENTF_EXTENDEDKEY | KEYEVENTF_KEYUP, 0);
+		}
+	}
+	
+	return 0;
+}
+
+// 2. declare functions at file scope 
+void toClipboard(HWND hwnd, const std::string& s) {
+	OpenClipboard(hwnd);
+	EmptyClipboard();
+	HGLOBAL hg = GlobalAlloc(GMEM_MOVEABLE, s.size() + 1);
+	if (!hg) {
+		CloseClipboard();
+		return;
+	}
+	memcpy(GlobalLock(hg), s.c_str(), s.size() + 1);
+	GlobalUnlock(hg);
+	SetClipboardData(CF_TEXT, hg);
+	CloseClipboard();
+	GlobalFree(hg);
+}
+
+std::ifstream::pos_type filesize(const char* filename)
+{
+	std::ifstream in(filename, std::ifstream::ate | std::ifstream::binary);
+	return in.tellg();
+}
