@@ -10,8 +10,6 @@ then to stop this you press the escape key on the keyboard.
 
 the text below is only an idea not related to this repository.
 /////////////////////
-some idea on polymorphism:
-
 see picture of blue square in middle top, two stacked blue squares bottom left, two stacked pink squares bottom right.
 the box with text is below the top middle blue square, in the text box is:
 condition
@@ -167,3 +165,80 @@ NOT NOT
 imagine lack of energy in the wave slit experiment is the empty space between the wave marks on the wall.)
 
 this is the particle pattern.
+
+/////////////////////
+
+gravity = 9.8 meters per second divided by second 
+
+{
+- time = 0 (seconds)
+- velocity = 0 (meters per second)
+- position y = 0 (meters)
+}
+
+{
+- time = 1 (seconds)
+- velocity = 9.8 (meters per second)
+- position y = 9.8 (meters)
+}
+
+{
+- time = 2 (seconds)
+- velocity = 19.6 (meters per second)
+- position y = 29.4 (meters)
+}
+
+the math trick is:
+- the top of the fall = 0 velocity
+- and on the ground = 0 velocity
+
+you go from:
+- 0 in the air
+- to 0 on the ground
+- to 0 in the air
+
+the velocity is dragging the first class magnet through the second and third classes magnetic polarities, creating repel and attract.
+
+reaching the positive polarity of the third class = attraction, the velocity stops, so the attraction goes from the third class back to positive in the first class magnet.
+
+the velocity moving through magnetic polarity means stretching the polarity of one magnet through the polarities of two other magnets.
+then the stretching is stopped and the first magnet no longer moves its negative polarity through the second and third class magnetic polarities.
+
+now the dynamic casting has a zero that is the magnetic polarity of positive on the first class parent.
+then you have a positive on the bottom of the child class polarity, just like zero = zero.
+
+from zero in the air to zero on the ground to zero in the air, you stretch. start the stretch from the parent to child, then release the stretch back to parent.
+
+growin the length travelled each time, because of velocity.
+
+stretching = adult age at some point of velocity, now the particle can be changed to a wave. the velocity is spent on a attraction to the third class positive polarity instead of the first class positive polarity.
+
+this switches the attraction from the first class magnet that has (positive to negative) polarity, to the first class magnet that has the (negative to positive) polarity.
+
+/////////////////////
+
+starting with (a particle = the three classes) start stretching.
+
+the velocity hitting the ground creates a bounce off the ground, the bounce flips velocity to move upwards.
+
+the positive polarity from the child on the ground reaches up to the positive polarity of the parent in the air. the parent in the air (condition true) being ignored in favor of the parent in the air (condition false).
+because (condition false) attracts the magnet on the ground which goes to the positive polarity of the second parent as a result, converting the particle to a wave in the process.
+
+because the bounce has to stop, the particle in the air cannot stretch downwards anymore.
+but the neighbouring magnetic polarity in the first class parent position also have a positive polarity the first class parent can go to. 
+so the magnet goes to one of these neighbouring particles instead, creating a link with a new particle to take the role of the first class parent.
+
+/////////////////////
+
+the linked particle starts from zero velocity, but this time the particle in the air is negative, and the particle on the ground is negative.
+the negative polarity from the child on the ground reaches up to the negative polarity of the parent in the air.
+the parent in the air (condition true) being ignored in favor of the parent in the air (condition false).
+because (condition false) attracts the magnet on the ground which goes to the negative polarity of the second parent as a result, converting the particle to a wave in the process.
+
+magnetic attraction leads to going from [(condition false) = negative in the air = zero velocity], to [(condition false) = negative on the ground = zero velocity], which happens to be the other particle being stretched.
+now both particles are being stretched in the wave as the result of only one particle being stretched.
+
+/////////////////////
+
+
+after thinking about this i think i can relate the movement logic to the diagrams of c++ code using dynamic casting, polymorphism, and virtual classes. but i will look at this one step or section at a time. then re-edit my document for clarification one section at a time.
