@@ -95,32 +95,30 @@ the polarity acts like a function in the derived class that's not inside the bas
 /////////////////////
 
 
-see picture of square in middle top, two stacked squares bottom left, two stacked squares bottom right.
-the box with text is below the top middle blue square, in the text box is:
-condition
-true
-false
+From the condition false, the two derived classes have polymorphism access to the Base class virtual function but use dynamic_cast instead. 
 
-the top box minus sign has a arrow pointing down to the word "condition".
-the word "true" has an arrow pointing to the top left box plus sign.
-the word "false" has an arrow pointing to the top right box minus sign.
+the false condition Derived classes are equal in polarity, so the Base and Derived classes in the false condition are equal, the same thing.
+So the false condition creates a set of Base classes that the derived condition inherits from. 
 
-the top box has the plus and minus signs arranged with the plus on top and the minus on the bottom.
-the two stacked bottom boxes on the left also have the plus and minus signs arranged with the plus on top and the minus on the bottom.
-the two stacked bottom boxes on the right also have the plus and minus signs arranged with the plus on bottom and the minus on the top.
+The Base class in the middle top of the picture in inherited by the two new base classes.
+one new base class on the top right of the picture, and one new base class on the top left of the picture.
+Each base class also have an arrow pointing down to the text box word "condition".
+marked on the two derived base classes is '-' above '+'.
 
-to the left of the two stacked boxes on the left  is another box that has the plus and minus signs arranged with the plus on bottom and the minus on the top = top box left.
-to the right of the two stacked boxes on the right is another box that has the plus and minus signs arranged with the plus on bottom and the minus on the top = top box right.
-each of these two boxes plus sign has an arrow pointing down to the word "condition".
-top box right box word "true" has an arrow pointing to the top right stacked box minus sign.
-top  box left box word "false" has an arrow pointing to the top left stacked box plus sign.
+the top left box '+' symbol goes to the top stacked box top symbol '+', 
+- false magnetic polarity attraction condition 
+- 1 not attracted, 2 attracted
+
+the top right box '+' symbol goes to the top stacked box top symbol '-', 
+- true magnetic polarity attraction condition
+- 0 not attracted, 3 attracted
+
+description: 
+the creation of new derived base class creates a true and false derived inheritance, which would make another set of derived base classes.
+to prevent another set of base classes being created make the first set of derived base classes virtually inherit the base class, then there is only one parent inherited from in polymorphic virtual function.
 
 
-(the magnet_1 [positive to negative]) goes to two magnets with polarity [positive to negative] and tests a magnetic attraction condition (the flipped magnet_1 [negative to positive]) goes to two magnets with polarity [positive to negative] and tests a magnetic attraction condition
-
-(the magnet_1 [positive to negative]) goes to two magnets with polarity [negative to positive] and tests a magnetic attraction condition (the flipped magnet_1 [negative to positive]) goes to two magnets with polarity [negative to positive] and tests a magnetic attraction condition
-
-description: the parent class might be false using magnets to decide, but not if the parent flips their magnetic polarity, then the polarity begins at the parent.
+the parent class might be false using magnets to decide, but not if the parent flips their magnetic polarity, then the polarity begins at the parent.
 
 /////////////////////
 
