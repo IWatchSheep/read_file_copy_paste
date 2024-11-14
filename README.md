@@ -116,9 +116,9 @@ the top right box '+' symbol goes to the top stacked box top symbol '-',
 description: 
 the creation of new derived base class creates a true and false derived inheritance, which would make another set of derived base classes.
 to prevent another set of base classes being created make the first set of derived base classes virtually inherit the base class, then there is only one parent inherited from in polymorphic virtual function.
+then polymorphism inheritance is true = 0 not attracted, 3 attracted
 
-
-the parent class might be false using magnets to decide, but not if the parent flips their magnetic polarity, then the polarity begins at the parent.
+the parent class might be false using magnets to decide, but not if the parent flips their magnetic polarity, then the inheritance is true.
 
 /////////////////////
 
