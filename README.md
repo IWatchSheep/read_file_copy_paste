@@ -9,9 +9,11 @@ then you can put more text into the original file, save it, then that will autom
 then to stop this you press the escape key on the keyboard.
 
 the text below is only an idea not related to this repository.
+
 /////////////////////
 
 see picture of blue square in middle top, two stacked blue squares bottom left, two stacked pink squares bottom right.
+
 the box with text is below the top middle blue square, in the text box is line 1 = "condition" line 2 = "true" line 3 = "false".
 
 the top blue box has a arrow pointing down to the word "condition".
@@ -58,24 +60,36 @@ if(derived)
 
 /////////////////////
 
-see picture of square in middle top, two stacked squares bottom left, two stacked squares bottom right.
-the box with text is below the top middle blue square, in the text box is:
-condition
-true
-false
+see picture of square in the middle top of the picture.
+marked in the square is '+' above '-' .
 
-the top box minus sign has a arrow pointing down to the word "condition".
-the word "true" has an arrow pointing to the top left box plus sign.
-the word "false" has an arrow pointing to the top right box minus sign.
+add in to the picture two stacked squares on the bottom left of the top middle square, 
+marked in each of these two boxes is '+' above '-'.
 
-the top box has the plus and minus signs arranged with the plus on top and the minus on the bottom.
-the two stacked bottom boxes on the left also have the plus and minus signs arranged with the plus on top and the minus on the bottom.
-the two stacked bottom boxes on the right also have the plus and minus signs arranged with the plus on bottom and the minus on the top.
+add in to the picture two stacked squares on the bottom right of the top middle square.
+marked in each of these two boxes is '-' above '+'.
 
-(the magnet_1 [positive to negative]) goes to condition - condition goes to (the flipped magnet2 [negative to positive]). (the flipped magnet2 [negative to positive]) goes to (the flipped magnet_3 [negative to positive]) = (1 repelled magnet = magnet 1), (2 attracted magnets: flipped magnets 2 and 3)
+the box with text is below the top middle square, in the text box is line 1 = "condition" line 2 = "true" line 3 = "false".
 
-condition goes to (the magnet2 [positive to negative]). (the magnet2 [positive to negative]) goes to (the magnet3 [positive to negative]) = 0 repelled magnets, (3 attracted magnets: magnet1, magnet2, magnet3)
-description: dynamic cast works if the classes have magnetic polarity. the magnets attract if inheritance is true.
+the top middle square has an arrow pointing down to the word "condition".
+the word "true" has an arrow pointing to the top stacked box on the left, at the '+' symbol.
+the word "false" has an arrow pointing to the top stacked box on the right, at the '-' symbol.
+
+the top middle box '-' symbol goes to one of the top stacked boxes symbol, 
+- true = '+', 
+- false = '-',
+and tests a magnetic polarity attraction condition 
+
+- the top middle box goes to false condition = '-' symbol not attracted to '-' symbol 
+- the top stacked box goes to the bottom stacked box = '+' symbol attracted to '-' symbol
+- 1 not attracted, 2 attracted
+
+- the top middle box goes to true condition = '-' symbol attracted to '+' symbol 
+- the top stacked box goes to the bottom stacked box = '-' symbol attracted to '+' symbol
+- 0 not attracted, 3 attracted
+
+description: the polarity of the two bottom right stacked boxes is not in the top middle box.
+the polarity acts like a function in the derived class that's not inside the base class.
 
 
 /////////////////////
