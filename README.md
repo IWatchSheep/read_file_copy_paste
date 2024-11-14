@@ -10,22 +10,51 @@ then to stop this you press the escape key on the keyboard.
 
 the text below is only an idea not related to this repository.
 /////////////////////
+
 see picture of blue square in middle top, two stacked blue squares bottom left, two stacked pink squares bottom right.
-the box with text is below the top middle blue square, in the text box is:
-condition
-true
-false
+the box with text is below the top middle blue square, in the text box is line 1 = "condition" line 2 = "true" line 3 = "false".
 
 the top blue box has a arrow pointing down to the word "condition".
-the word "true" has an arrow pointing to the top blue box.
-the word "false" has an arrow pointing to the top pink box.
+the word "true" has an arrow pointing left to the top blue box on the left.
+the word "false" has an arrow pointing right to the top pink box on the right.
 
-blue_1) goes to another color either pink or blue and tests a color equality condition - condition goes to (the color pink1). (the color pink1) goes to (the color pink_2) = 1 color blue, 2 color pink
+the top blue box goes to another color either pink or blue and tests a color equality condition 
+- the top blue box goes to the top pink stacked box. 
+- the top pink stacked box goes to the bottom pink stacked box = 1 color blue, 2 color pink stacked boxes
 
-condition goes to (the color blue2). (the color blue2) goes to (the color blue_3) = 3 color blue, 0 color pink
-description: Dynamic cast in C++ polymorphism, The original class is labelled "Parent". Additional classes are labelled "Child" classes. Child classes append the Parent class name to the child class named like this: child class name : parent class name { };
+- the top blue box goes to the top blue stacked box. 
+the top blue stacked box goes to the bottom blue stacked box = 1 color blue, 2 color blue stacked boxes
 
-If the parent has a public function not in the child classes, through "dynamic cast" the child classes can inherit the parent function and use the parent function. but the child class having a public function not in the parent class then the parent can't use dynamic cast to inherit the function from the child.
+description: 
+
+- C++ inheritance.
+The original class is labelled "Base". 
+Additional classes are labelled "Derived". 
+
+Derived class name appends the Base class name like this: 
+Derived : Base
+{
+public:
+};
+
+- C++ polymorphism.
+There is the same virtual function in the Base and Derived class.
+Base* base = new Derived;
+base->function(); // shows function in Derived class
+
+- C++ casting.
+There is a function in the Derived class not in the Base class. To use that function use dynamic_cast.
+
+Base* base = new Derived;
+
+// base->test(); // = error
+
+Derived* derived = dynamic_cast<Derived*>(base);
+
+if(derived)
+{
+    derived->test(); // shows function in Derived class
+}
 
 /////////////////////
 
